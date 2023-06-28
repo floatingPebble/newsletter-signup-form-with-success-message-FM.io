@@ -17,8 +17,7 @@
 /*
   3. Allow percentage-based heights in the application
 */
-html,
-body {
+html {
     height: 100%;
 }
 
@@ -94,16 +93,236 @@ h6 {
     --DARK-SLATE-GREY: hsl(234, 29%, 20%);
     --CHARCOAL-GREY: hsl(235, 18%, 26%);
     --GREY: hsl(231, 7%, 60%);
+    --GREY-INPUT: hsl(230, 4%, 67%);
+    --BTN-HOVER-SHADOW: hsla(4, 99%, 66%, 0.45);
     --WHITE: hsl(0, 0%, 100%);
 
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 
+.form-part {
+    padding: 2rem 1.5rem 2rem 1.6rem;
+}
+
 .tagline {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: var(--DARK-SLATE-GREY);
+}
+
+.about-list {
+    font-weight: 700;
+    color: var(--CHARCOAL-GREY);
+    margin-block: 0.95rem 1.7rem;
+}
+
+.updates-list {
+    list-style-type: none;
+    color: var(--CHARCOAL-GREY);
+    font-weight: 700;
+    padding-left: 0;
+    margin-bottom: 1.4rem;
+}
+
+.updates-list li {
+    display: flex;
+    padding-bottom: 0.7rem;
+}
+
+.updates-list li::before {
+    content: url(assets/images/icon-list.svg);
+    display: block;
+    margin-right: 1rem;
+    margin-top: 0.1rem;
+}
+
+.email-form label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--DARK-SLATE-GREY);
+}
+
+.input-email {
+    border: 1px solid var(--GREY-INPUT);
+    padding-block: 0.95rem;
+    padding-left: 1.4rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.input-email:focus,
+.input-email:active {
+    border: 1px solid black;
+    color: var(--DARK-SLATE-GREY);
+    outline: none;
+}
+
+.input-email:hover {
+    cursor: pointer;
+}
+
+.input-email::placeholder {
+    color: var(--GREY-INPUT);
+}
+
+.btn-subscribe,
+.btn-dismiss {
+    width: 100%;
+    padding-block: calc(0.95rem + 1px);
+    color: var(--WHITE);
+    border-radius: 0.5rem;
+    background-color: var(--DARK-SLATE-GREY);
+    border: none;
+    margin-block: 1.48rem 0.5rem;
+    transition: 0.15s;
+}
+
+.btn-subscribe:hover,
+.btn-dismiss:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, #fe527a, #fe6a3c);
+    box-shadow: 0 1rem 2rem 0.2rem var(--BTN-HOVER-SHADOW);
+    transition: 0.15s;
+}
+
+.success-msg {
+    padding: 9.3rem 1.5rem 2rem 1.5rem;
+    background-color: var(--WHITE);
+}
+
+.thank-you {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: var(--DARK-SLATE-GREY);
+    margin-block: 2.6rem 1.5rem;
+}
+
+.confirmation {
+    color: var(--DARK-SLATE-GREY);
+    line-height: 1.5rem;
+    margin-bottom: 15rem;
 }
 
 .hidden {
     display: none;
+}
+
+.confirmation span {
+    font-weight: 700;
+}
+
+@media screen and (min-width: 901px) {
+    body {
+        background-color: var(--DARK-SLATE-GREY);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-block: 3rem;
+        height: 100%;
+    }
+
+    .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .newsletter-sign-up {
+        padding: 1.5rem;
+        border-radius: 2rem;
+        background-color: var(--WHITE);
+        width: min(90%, 57.95rem);
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .img-part {
+        width: 45.5%;
+    }
+
+    .img-part picture {
+        width: 100%;
+        height: auto;
+    }
+
+    .form-part {
+        padding: 2.5rem 3.95rem 2rem 2.5rem;
+        width: 54.5%;
+    }
+
+    .tagline {
+        font-size: 3.4rem;
+        margin-top: 1.28rem;
+    }
+
+    .about-list,
+    .updates-list {
+        font-weight: 400;
+    }
+
+    .about-list {
+        margin-block: 0.7rem 1.5rem;
+    }
+
+    .updates-list li {
+        display: flex;
+        padding-bottom: 0.25rem;
+    }
+
+    .updates-list {
+        margin-bottom: 1.9rem;
+    }
+
+    .email-form label {
+        margin-bottom: -0.05rem;
+    }
+
+    .success-msg {
+        width: min(90%, 31.6rem);
+        padding: 3rem 3.8rem;
+        border-radius: 2rem;
+    }
+
+    .thank-you {
+        font-size: 3.4rem;
+        line-height: 3.4rem;
+    }
+
+    .confirmation {
+        margin-bottom: 1rem;
+    }
+
+
+    .btn-dismiss {
+        margin-block: 1.58rem 1.02rem;
+    }
+
+    /*  
+        .thank-you {
+            font-size: 2.5rem;
+            line-height: 2.5rem;
+            color: var(--DARK-SLATE-GREY);
+            margin-block: 2.6rem 1.5rem;
+        }
+    
+        .confirmation {
+            color: var(--DARK-SLATE-GREY);
+            line-height: 1.5rem;
+            margin-bottom: 15rem;
+        }
+    
+        .hidden {
+            display: none;
+        }
+    
+        .confirmation span {
+            font-weight: 700;
+        }
+ */
+    .hidden {
+        display: none;
+    }
 }
