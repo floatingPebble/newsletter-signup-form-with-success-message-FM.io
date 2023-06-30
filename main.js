@@ -1,13 +1,21 @@
 const form = document.getElementById("email-form");
 const email = document.getElementById("input-email");
 const regex = new RegExp("^(.+)@(.+)$");
+const userEmail = document.getElementById("user-email");
 
-form.addEventListener('submit', e => {
+if (form != null) {
+    form.addEventListener('submit', e => {
 
-    console.log(regex.test(email.value.trim()));
+        if (!regex.test(email.value.trim())) {
+            e.preventDefault();
+            form.classList.add("error");
+        } else {
+            localStorage.setItem("email", email.value.trim());
+        }
+    });
+}
 
-    if (!regex.test(email.value.trim())) {
-        e.preventDefault();
-        form.classList.add("error");
-    }
-});
+function addUserEmail() {
+    userEmail.innerHTML = localStorage.getItem("email");
+    localStorage.removeItem("email");
+}

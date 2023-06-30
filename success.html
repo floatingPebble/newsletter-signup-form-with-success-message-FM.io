@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
     <title>Success</title>
 </head>
 
-<body>
+<body onload="addUserEmail()">
     <main>
         <article class="success-msg" id="success-msg">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
@@ -24,12 +26,12 @@
             </svg>
             <h2 class="thank-you">Thanks for subscribing!</h2>
             <p class="confirmation">
-                A confirmation email has been sent to <span>ash@loremcompany.com</span>.
+                A confirmation email has been sent to <span id="user-email">ash@loremcompany.com</span>.
                 Please open it and click the button inside to confirm your subscription.
             </p>
-            <button class="btn-dismiss">
+            <a class="btn-dismiss" href="http://127.0.0.1:5500/?">
                 Dismiss message
-            </button>
+            </a>
         </article>
     </main>
 </body>

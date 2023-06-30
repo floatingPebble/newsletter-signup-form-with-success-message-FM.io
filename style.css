@@ -168,6 +168,12 @@ h6 {
     color: var(--GREY-INPUT);
 }
 
+.btn-dismiss {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
 .btn-subscribe,
 .btn-dismiss {
     width: 100%;
