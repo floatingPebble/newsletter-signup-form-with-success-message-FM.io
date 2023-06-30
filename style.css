@@ -90,6 +90,7 @@ h6 {
 
 :root {
     --TOMATO: hsl(4, 100%, 67%);
+    --LIGHT-TOMATO: hsla(4, 100%, 67%, 0.2);
     --DARK-SLATE-GREY: hsl(234, 29%, 20%);
     --CHARCOAL-GREY: hsl(235, 18%, 26%);
     --GREY: hsl(231, 7%, 60%);
@@ -205,12 +206,28 @@ h6 {
     margin-bottom: 15rem;
 }
 
-.hidden {
-    display: none;
-}
-
 .confirmation span {
     font-weight: 700;
+}
+
+.email-form {
+    position: relative;
+}
+
+.email-form.error::before {
+    content: "Valid email required";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--TOMATO);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.email-form.error .input-email {
+    border: 1px solid var(--TOMATO);
+    background-color: var(--LIGHT-TOMATO);
+    color: var(--TOMATO);
 }
 
 @media screen and (min-width: 901px) {
@@ -219,18 +236,12 @@ h6 {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-block: 3rem;
-        height: 100%;
+        padding-block: 13.75rem;
+        min-height: 100%;
     }
 
     .main-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100%;
-    }
-
-    .newsletter-sign-up {
         padding: 1.5rem;
         border-radius: 2rem;
         background-color: var(--WHITE);
@@ -280,11 +291,11 @@ h6 {
         margin-bottom: -0.05rem;
     }
 
-    .success-msg {
+    /* .success-msg {
         width: min(90%, 31.6rem);
         padding: 3rem 3.8rem;
         border-radius: 2rem;
-    }
+    } */
 
     .thank-you {
         font-size: 3.4rem;
@@ -295,34 +306,7 @@ h6 {
         margin-bottom: 1rem;
     }
 
-
     .btn-dismiss {
         margin-block: 1.58rem 1.02rem;
-    }
-
-    /*  
-        .thank-you {
-            font-size: 2.5rem;
-            line-height: 2.5rem;
-            color: var(--DARK-SLATE-GREY);
-            margin-block: 2.6rem 1.5rem;
-        }
-    
-        .confirmation {
-            color: var(--DARK-SLATE-GREY);
-            line-height: 1.5rem;
-            margin-bottom: 15rem;
-        }
-    
-        .hidden {
-            display: none;
-        }
-    
-        .confirmation span {
-            font-weight: 700;
-        }
- */
-    .hidden {
-        display: none;
     }
 }

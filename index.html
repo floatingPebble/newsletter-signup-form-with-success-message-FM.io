@@ -15,51 +15,27 @@
 <body>
 
     <main class="main-container">
-        <article class="newsleter-sign-up hidden" id="newsleter-sign-up">
-            <section class="img-part">
-                <picture class="illustration-sign">
-                    <source media="(max-width: 900px)" srcset="assets/images/illustration-sign-up-mobile.svg">
-                    <source media="(min-width: 901px)" srcset="assets/images/illustration-sign-up-desktop.svg">
-                    <img src="assets/images/illustration-sign-up-mobile.svg" alt="Sign-up illustration">
-                </picture>
-            </section>
-            <section class="form-part">
-                <h1 class="tagline">Stay updated!</h1>
-                <p class="about-list" id="about-list">Join 60,000+ product managers receiving monthly updates on:</p>
-                <ul class="updates-list" aria-labelledby="about-list">
-                    <li>Product discovery and building what matters</li>
-                    <li>Measuring to ensure updates are a success</li>
-                    <li>And much more!</li>
-                </ul>
-                <form action="#" class="email-form" id="email-form">
-                    <label for="input-email">Email address</label>
-                    <input type="email" class="input-email" id="input-email" placeholder="email@company.com" required>
-                    <button class="btn-subscribe" type="submit">Subscribe to monthly newsletter</button>
-                </form>
-            </section>
-        </article>
-        <article class="success-msg" id="success-msg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-                <defs>
-                    <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
-                        <stop offset="0%" stop-color="#FF6A3A" />
-                        <stop offset="100%" stop-color="#FF527B" />
-                    </linearGradient>
-                </defs>
-                <g fill="none">
-                    <circle cx="32" cy="32" r="32" fill="url(#a)" />
-                    <path stroke="#FFF" stroke-width="4" d="m18.286 34.686 8.334 7.98 19.094-18.285" />
-                </g>
-            </svg>
-            <h2 class="thank-you">Thanks for subscribing!</h2>
-            <p class="confirmation">
-                A confirmation email has been sent to <span>ash@loremcompany.com</span>.
-                Please open it and click the button inside to confirm your subscription.
-            </p>
-            <button class="btn-dismiss">
-                Dismiss message
-            </button>
-        </article>
+        <section class="img-part">
+            <picture class="illustration-sign">
+                <source media="(max-width: 900px)" srcset="assets/images/illustration-sign-up-mobile.svg">
+                <source media="(min-width: 901px)" srcset="assets/images/illustration-sign-up-desktop.svg">
+                <img src="assets/images/illustration-sign-up-mobile.svg" alt="Sign-up illustration">
+            </picture>
+        </section>
+        <section class="form-part">
+            <h1 class="tagline">Stay updated!</h1>
+            <p class="about-list" id="about-list">Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul class="updates-list" aria-labelledby="about-list">
+                <li>Product discovery and building what matters</li>
+                <li>Measuring to ensure updates are a success</li>
+                <li>And much more!</li>
+            </ul>
+            <form action="/" class="email-form" id="email-form">
+                <label for="input-email">Email address</label>
+                <input type="text" inputmode="url" class="input-email" id="input-email" placeholder="email@company.com">
+                <button class="btn-subscribe" type="submit">Subscribe to monthly newsletter</button>
+            </form>
+        </section>
     </main>
 
 </body>
